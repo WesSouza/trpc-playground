@@ -1,0 +1,51 @@
+{
+  "name": "trpc-playground",
+  "version": "1.0.0",
+  "description": "tRPC Playground",
+  "repository": "git@github.com:WesSouza/trpc-playground.git",
+  "author": "Wes Souza <noreply@wes.dev>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "vite build",
+    "check:types": "tsc --noEmit",
+    "lint": "eslint src",
+    "start": "vite"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "@vercel/node": "^2.5.11",
+    "@vitejs/plugin-react": "^2.0.1",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "import-sort-style-wes": "^3.0.2",
+    "prettier": "2.7.1",
+    "prettier-plugin-import-sort": "^0.0.7",
+    "typescript": "^4.7.4",
+    "typescript-plugin-css-modules": "^3.4.0",
+    "vite": "^3.0.8"
+  },
+  "resolutions": {
+    "typescript-plugin-css-modules/**/postcss": "^8.4.16"
+  },
+  "importSort": {
+    ".js, .jsx": {
+      "parser": "babylon",
+      "style": "wes"
+    },
+    ".ts, .tsx": {
+      "parser": "typescript",
+      "style": "wes"
+    }
+  }
+}
