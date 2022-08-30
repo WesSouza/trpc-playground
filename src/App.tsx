@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
-import { HelloForm } from './HelloForm';
+import { Rainbow } from './Rainbow';
 import { trpc } from './utils/trpc';
 
 export function App() {
@@ -15,8 +15,7 @@ export function App() {
   return (
     <trpc.Provider client={trpcClient} queryClient={queryClient}>
       <QueryClientProvider client={queryClient}>
-        <h1>tRPC Playground</h1>
-        <HelloForm />
+        <Rainbow />
       </QueryClientProvider>
     </trpc.Provider>
   );

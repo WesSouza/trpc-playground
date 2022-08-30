@@ -1,18 +1,20 @@
 import * as trpc from '@trpc/server';
 import { z } from 'zod';
 
-export const appRouter = trpc.router().query('hello', {
-  input: z
-    .object({
-      text: z.string().nullish(),
-    })
-    .nullish(),
-  resolve({ input }) {
-    return {
-      greeting: `hello ${input?.text ?? 'world'}`,
-    };
-  },
-});
+import { getColors, vote } from './_db';
 
-// export type definition of API
+export const appRouter = trpc
+  .router()
+  .query('getColors', {
+    resolve() {
+      return getColors();
+    },
+  })
+  .mutation('vote', {
+    input: z.string(),
+    resolve({ input }) {
+      return vote(input);
+    },
+  });
+
 export type AppRouter = typeof appRouter;
