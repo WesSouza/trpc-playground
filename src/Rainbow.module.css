@@ -21,7 +21,7 @@
   display: block;
   flex-grow: var(--proportion);
   margin: 0;
-  transition: flex-grow 0.25s ease-in-out;
+  transition: flex-grow 1s ease-in-out;
 }
 
 .rainbowLoading .colorButton {

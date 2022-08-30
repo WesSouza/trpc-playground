@@ -11,7 +11,7 @@ const client = new Redis(process.env.REDIS_URL);
 function mapVotes(colorVotes: Record<string, string>) {
   return colors.map((color) => ({
     ...color,
-    count: (colorVotes[color.id] ? Number(colorVotes[color.id]) : 0) + 1,
+    count: (colorVotes[color.id] ? Number(colorVotes[color.id]) : 0) + 5,
   }));
 }
 
